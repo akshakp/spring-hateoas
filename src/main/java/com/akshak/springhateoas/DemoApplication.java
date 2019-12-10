@@ -10,9 +10,5 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 	
-	// @Bean
-	// EvoInflectorLinkRelationProvider relProvider() {
-	// 	return new EvoInflectorLinkRelationProvider();
-	// }
-
+	
 }

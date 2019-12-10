@@ -24,22 +24,19 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUser(long id) {
-        return this.dummyUsers.stream()
-        .filter(p -> p.getId() == Long.valueOf(id))
-        .findFirst().get() ;
+    public User getUser(final long id) {
+        return this.dummyUsers.stream().filter(p -> p.getId() == Long.valueOf(id)).findFirst().get();
     }
 
     @Override
-    public List<User> deleteUser(long id) {
-        List<User> users = this.dummyUsers.stream()
-        .filter(p -> p.getId() != Long.valueOf(id))
-        .collect(Collectors.toList());
+    public List<User> deleteUser(final long id) {
+        final List<User> users = this.dummyUsers.stream().filter(p -> p.getId() != Long.valueOf(id))
+                .collect(Collectors.toList());
         return users;
     }
-    
-    private List<User> setupUsers(){
-        List<User> users = new ArrayList<User>();
+
+    private List<User> setupUsers() {
+        final List<User> users = new ArrayList<User>();
         users.add(new User("User", "1", "user1@test.com", 1, true));
         users.add(new User("User", "2", "user2@test.com", 2, true));
         users.add(new User("User", "3", "user3@test.com", 3, true));
