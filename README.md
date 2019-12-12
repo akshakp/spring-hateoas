@@ -1,4 +1,4 @@
-# spring-hateoas
+# springboot 2.2.2 + Spring hateoas 1.0.2 + Java 8 Example
 
 This is an example of Spring Hateoas implementation with Spring Boot 2.2 and JAVA 8 Stream APIs.
 Link to the details will be returned in the result for active users. Users marked as "active : false" will be returned without link.
